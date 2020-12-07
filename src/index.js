@@ -110,8 +110,11 @@ export class Map extends React.Component {
         currentLocation: this.props.center
       });
     }
-    if (prevState.currentLocation !== this.state.currentLocation) {
-      this.recenterMap();
+    if (
+      prevState.currentLocation.lat !== this.state.currentLocation.lat || 
+      prevState.currentLocation.lng !== this.state.currentLocation.lng
+      ) {
+        this.recenterMap();
     }
     if (this.props.bounds && this.props.bounds !== prevProps.bounds) {
       this.map.fitBounds(this.props.bounds);
