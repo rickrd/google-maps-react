@@ -205,9 +205,9 @@
         if (this.props.zoom !== prevProps.zoom) {
           this.map.setZoom(this.props.zoom);
         }
-        if (this.props.center !== prevProps.center) {
+        if ( this.props.center.lat !== prevProps.center.lat || this.props.center.lng !== prevProps.center.lng) {
           this.setState({
-            currentLocation: this.props.center
+              currentLocation: this.props.center
           });
         }
         if (prevState.currentLocation.lat !== this.state.currentLocation.lat || prevState.currentLocation.lng !== this.state.currentLocation.lng) {
