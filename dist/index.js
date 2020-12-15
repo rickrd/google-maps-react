@@ -196,9 +196,9 @@
     }, {
       key: 'componentDidUpdate',
       value: function componentDidUpdate(prevProps, prevState) {
-        if (prevProps.google !== this.props.google) {
-          this.loadMap();
-        }
+        // if (prevProps.google !== this.props.google) {
+        //   this.loadMap();
+        // }
         if (this.props.visible !== prevProps.visible) {
           this.restyleMap();
         }
